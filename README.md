@@ -4,9 +4,13 @@ Community jailbreak toolkit in it's infancy. Project will likely be renamed once
 
 #### Not for users. This is (currently) a developer-only tool. 
 
+## License
+
+The code in this project from rootlessJB3 is licensed here with permission. 
+
 ## Goal
 
-Not quite sure yet
+Not quite sure yet :)
 
 ### Current support
 
