@@ -1,21 +1,23 @@
 {
   "images" : [
     {
+      "filename" : "air-atmosphere-cloudiness-clouds-wallpaper-2.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "air-atmosphere-cloudiness-clouds-wallpaper.jpg",
       "idiom" : "universal",
-      "filename" : "axi-vilcinschi-1269615-unsplash 11-12-29-872.jpg",
       "scale" : "2x"
     },
     {
+      "filename" : "air-atmosphere-cloudiness-clouds-wallpaper-1.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

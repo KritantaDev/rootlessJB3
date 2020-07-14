@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "Interface/ViewController.h"
+#include "perception.h"
+
+#define maxVersion(v)  ([[[UIDevice currentDevice] systemVersion] compare:@v options:NSNumericSearch] != NSOrderedDescending)
+
 
 @interface AppDelegate ()
 
@@ -17,8 +22,34 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    static dispatch_once_t once;
+    dispatch_once(&once, ^ {
+        printf("Starting up...");
+        [ViewController sendToLog:@"Launched" withTick:"~"];
+        
+         [ViewController sendToLog:
+         [NSString stringWithFormat:@"iOS Version: %@", [[UIDevice currentDevice] systemVersion]]
+                         withTick:"i"];
+        
+        if (maxVersion("13.3"))
+        {
+            [ViewController sendToLog:@"1 Exploit compatible..." withTick:"~"];
+        }
+        else
+        {
+            [ViewController sendToLog:@"No compatible exploits in this project" withTick:"~"];
+        }
+        
+        if (is_platform())
+        {
+            [ViewController sendToLog:@"Device already exploited with checkm8." withTick:"+"];
+        }
+        
+    });
     return YES;
 }
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
